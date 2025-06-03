@@ -1,17 +1,21 @@
-package Chintz-01;
+import java.util.Scanner;
 
-public class App 
-{
-    public static void main( String[] args )
-    {
-        number=[6,10,20,5,30,60,17,35]
-            for (i=0;i<=7;i++)
-            if(i%10==0){
-                System.out.println("Number is disible by 10");
-            }
-        else{
-            System.out.println("Number is not divisible by 10");
+public class DivisibilityBy10 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int number = scanner.nextInt();
+
+        if (isDivisibleBy10(number)) {
+            System.out.println(number + " is divisible by 10.");
+        } else {
+            System.out.println(number + " is not divisible by 10.");
         }
-        print(numbers)
+
+        scanner.close();
+    }
+    public static boolean isDivisibleBy10(int num) {
+        return num % 10 == 0;
     }
 }
